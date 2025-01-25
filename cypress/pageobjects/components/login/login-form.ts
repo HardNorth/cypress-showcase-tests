@@ -77,7 +77,7 @@ export class LoginForm extends Component<LoginForm> {
         this.fillPassword(user.password);
     }
 
-    async login(user: User) {
+    login(user: User) {
         this.fillCredentials(user);
         this.loginButton.click();
     }
