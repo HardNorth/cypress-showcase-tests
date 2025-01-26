@@ -1,13 +1,15 @@
 import LoginPage from "../pageobjects/pages/login-page";
 import LoginService from "../services/ui/login";
+import {USERS} from "../data/users";
+import MainPage from "../pageobjects/pages/main-page";
 
-describe('User Sign-up and Login', () => {
+describe('User Login tests', () => {
     beforeEach(function () {
         cy.visit('/');
     });
 
     it('Verify Login Page details at open', () => {
-        LoginPage.expect.toHaveTitle("Cypress Real World App");
+        LoginPage.expect.toHaveTitle('Cypress Real World App');
         LoginPage.expect.toHaveURL(/\/signin$/);
         LoginPage.loginForm.expect.toHaveAllElements();
         LoginPage.loginForm.expect.toHaveAllNoErrors();
@@ -45,5 +47,17 @@ describe('User Sign-up and Login', () => {
         LoginPage.loginForm.expect.toNotHaveUsernameError()
         LoginPage.loginForm.expect.toHavePasswordError('Password must contain at least 4 characters');
         LoginPage.loginForm.expect.toNotHaveLoginButton();
+    });
+
+    it('Verify Login', () => {
+        LoginPage.loginForm.login(USERS[0]);
+        MainPage.transactions.expect.toHaveLengthGreaterThan(0);
+    });
+
+    it('Verify Login with invalid password', () => {
+        LoginPage.loginForm.fillUsername(LoginService.randomUser.username);
+        LoginPage.loginForm.fillPassword('12345');
+        LoginPage.loginForm.loginButton.click();
+        LoginPage.expect.toHaveLoginError('Username or password is invalid');
     });
 });

@@ -28,6 +28,10 @@ class MainPage extends Page<MainPage> {
     get headerMenu() {
         return this.headerNavComponent;
     }
+
+    get transactions() {
+        return this.transactionsComponent;
+    }
 }
 
 export class MainPageAssertions extends PageAssertions<MainPage> {
