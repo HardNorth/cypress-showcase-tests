@@ -3,7 +3,7 @@ import {USERS} from "../data/users";
 import MainPage from "../pageobjects/pages/main-page";
 
 describe('User Login tests', () => {
-    beforeEach(function () {
+    beforeEach(() => {
         cy.visit('/');
     });
 
