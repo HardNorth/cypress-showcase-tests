@@ -1,5 +1,4 @@
 import LoginPage from "../pageobjects/pages/login-page";
-import LoginService from "../services/ui/login";
 import {USERS} from "../data/users";
 import MainPage from "../pageobjects/pages/main-page";
 
@@ -17,14 +16,14 @@ describe('User Login tests', () => {
     });
 
     it('Verify Login Page details after credentials enter', () => {
-        LoginPage.loginForm.fillCredentials(LoginService.randomUser);
+        LoginPage.loginForm.fillCredentials(USERS[0]);
         LoginPage.loginForm.expect.toHaveAllElements();
         LoginPage.loginForm.expect.toHaveAllNoErrors();
         LoginPage.loginForm.expect.toHaveLoginButton();
     });
 
     it('Verify Login Page details after just username enter', () => {
-        LoginPage.loginForm.fillUsername(LoginService.randomUser.username);
+        LoginPage.loginForm.fillUsername(USERS[0].username);
         LoginPage.loginForm.expect.toHaveAllElements();
         LoginPage.loginForm.expect.toHaveAllNoErrors();
         LoginPage.loginForm.expect.toNotHaveLoginButton();
@@ -40,7 +39,7 @@ describe('User Login tests', () => {
     });
 
     it('Verify Login Page short password error message', () => {
-        LoginPage.loginForm.fillUsername(LoginService.randomUser.username);
+        LoginPage.loginForm.fillUsername(USERS[0].username);
         LoginPage.loginForm.fillPassword('123');
         LoginPage.loginForm.focusUsername();
         LoginPage.loginForm.expect.toHaveAllElements();
@@ -55,7 +54,7 @@ describe('User Login tests', () => {
     });
 
     it('Verify Login with invalid password', () => {
-        LoginPage.loginForm.fillUsername(LoginService.randomUser.username);
+        LoginPage.loginForm.fillUsername(USERS[0].username);
         LoginPage.loginForm.fillPassword('12345');
         LoginPage.loginForm.loginButton.click();
         LoginPage.expect.toHaveLoginError('Username or password is invalid');

@@ -1,12 +1,7 @@
-import {USERS} from "../../data/users";
 import LoginPage from "../../pageobjects/pages/login-page";
+import {User} from "../../data/interfaces";
 
-export default class Login {
-
-    static get randomUser() {
-        return USERS[Math.floor(Math.random() * USERS.length)];
-    }
-
+class Login {
     private static navigateIfNeeded() {
         cy.url().then(url => {
             if (!url.startsWith(process.env.BASE_URL)) {
@@ -15,9 +10,11 @@ export default class Login {
         });
     }
 
-    static loginWithRandomUser() {
+    static login(user: User) {
         // Login with random user
         Login.navigateIfNeeded();
-        LoginPage.loginForm.login(Login.randomUser);
+        LoginPage.loginForm.login(user);
     }
 }
+
+export default new Login();
