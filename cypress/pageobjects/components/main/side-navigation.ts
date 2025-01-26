@@ -50,8 +50,12 @@ class SideNavigation extends CloseableComponent<SideNavigation> {
         return cy.get(this.logOutLinkLocator);
     }
 
-    async close() {
+    close() {
         Header.sideMenuToggle.click();
+    }
+
+    openUserSettings() {
+        this.userSettingsLink.click();
     }
 }
 

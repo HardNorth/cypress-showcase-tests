@@ -4,13 +4,13 @@ import {User} from "../../../data/interfaces";
 export class LoginForm extends Component<LoginForm> {
     private readonly assertions: LoginFormAssertions
 
-    readonly usernameFieldLocator: string;
-    readonly passwordFieldLocator: string;
-    readonly rememberMeCheckboxLocator: string;
-    readonly loginButtonLocator: string;
-    readonly signUpLinkLocator: string;
-    readonly usernameHelperTextLocator: string;
-    readonly passwordHelperTextLocator: string;
+    private readonly usernameFieldLocator: string;
+    private readonly passwordFieldLocator: string;
+    private readonly rememberMeCheckboxLocator: string;
+    private readonly loginButtonLocator: string;
+    private readonly signUpLinkLocator: string;
+    private readonly usernameHelperTextLocator: string;
+    private readonly passwordHelperTextLocator: string;
 
     constructor(prefix: string) {
         super(`${prefix} form.SignInForm-form`);

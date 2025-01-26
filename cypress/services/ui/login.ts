@@ -1,7 +1,7 @@
 import LoginPage from "../../pageobjects/pages/login-page";
 import {User} from "../../data/interfaces";
 
-class Login {
+export default class Login {
     private static navigateIfNeeded() {
         cy.url().then(url => {
             if (!url.startsWith(process.env.BASE_URL)) {
@@ -16,5 +16,3 @@ class Login {
         LoginPage.loginForm.login(user);
     }
 }
-
-export default new Login();

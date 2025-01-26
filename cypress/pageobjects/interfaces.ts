@@ -22,7 +22,7 @@ export abstract class CloseableComponent<T extends CloseableComponent<T>> extend
         super(prefix);
     }
 
-    abstract close(): Promise<void>;
+    abstract close(): void;
 }
 
 export abstract class Page<T extends Page<T>> extends Component<T> {
