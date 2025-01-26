@@ -2,7 +2,7 @@ import {Page, PageAssertions} from "../interfaces";
 import {LoginForm} from "../components/login/login-form";
 import {SignUpForm} from "../components/login/sign-up-form";
 
-export class LoginPage extends Page<LoginPage> {
+class LoginPage extends Page<LoginPage> {
     private readonly assertions: LoginPageAssertions
     private readonly loginFormComponent: LoginForm;
     private readonly signUpFormComponent: SignUpForm;
@@ -10,7 +10,8 @@ export class LoginPage extends Page<LoginPage> {
     constructor() {
         super();
         this.assertions = new LoginPageAssertions(this);
-        this.loginFormComponent = new LoginForm();
+        this.loginFormComponent = new LoginForm('main.MuiContainer-root');
+        this.signUpFormComponent = new SignUpForm('main.MuiContainer-root');
     }
 
     get expect() {
@@ -31,3 +32,5 @@ class LoginPageAssertions extends PageAssertions<LoginPage> {
         super(page);
     }
 }
+
+export default new LoginPage();

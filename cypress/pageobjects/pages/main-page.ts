@@ -1,6 +1,6 @@
 import {Page, PageAssertions} from "../interfaces";
 
-export class MainPage extends Page<MainPage> {
+class MainPage extends Page<MainPage> {
     private readonly assertions: MainPageAssertions;
 
     constructor() {
@@ -18,3 +18,5 @@ export class MainPageAssertions extends PageAssertions<MainPage> {
         super(page);
     }
 }
+
+export default new MainPage();

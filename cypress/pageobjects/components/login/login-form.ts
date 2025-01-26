@@ -12,8 +12,8 @@ export class LoginForm extends Component<LoginForm> {
     readonly usernameHelperTextLocator: string;
     readonly passwordHelperTextLocator: string;
 
-    constructor() {
-        super("form.SignInForm-form");
+    constructor(prefix: string) {
+        super(`${prefix} form.SignInForm-form`);
         this.assertions = new LoginFormAssertions(this);
         this.usernameFieldLocator = `${this.prefix} input[name="username"][type="text"]`;
         this.passwordFieldLocator = `${this.prefix} input[name="password"][type="password"]`;
