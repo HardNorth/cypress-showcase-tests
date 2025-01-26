@@ -2,27 +2,34 @@ import {User} from "./interfaces";
 
 export const USERS: User[] = [
     {
-        fullName: 'Ted Parisian',
+        firstName: 'Ted',
+        lastName: 'Parisian',
         username: 'Heath93',
         password: 's3cret'
     },
     {
-        fullName: 'Kristian Bradtke',
+        firstName: 'Kristian',
+        lastName: 'Bradtke',
         username: 'Arvilla_Hegmann',
-        password: 's3cret'
+        password: 's3cret',
+        email: 'Skyla.Stamm@yahoo.com',
+        phoneNumber: '410-786-2112'
     },
     {
-        fullName: 'Darrel Ortiz',
+        firstName: 'Darrel',
+        lastName: 'Ortiz',
         username: 'Dina20',
         password: 's3cret'
     },
     {
-        fullName: 'Ruthie Prosacco',
+        firstName: 'Ruthie',
+        lastName: 'Prosacco',
         username: 'Reyes.Osinski',
         password: 's3cret'
     },
     {
-        fullName: 'Lia Rosenbaum',
+        firstName: 'Lia',
+        lastName: 'Rosenbaum',
         username: 'Judah_Dietrich50',
         password: 's3cret'
     }
