@@ -1,6 +1,6 @@
 import {Component, ComponentAssertions} from "../../interfaces";
 
-export class UserSettings extends Component<UserSettings> {
+export default class UserSettings extends Component<UserSettings> {
     private readonly assertions: UserSettingsAssertions
 
     private readonly userSettingsFormLocator: string;

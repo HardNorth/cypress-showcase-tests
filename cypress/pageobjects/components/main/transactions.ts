@@ -1,6 +1,6 @@
 import {Component, ComponentAssertions} from "../../interfaces";
 
-export class Transactions extends Component<Transactions> {
+export default class Transactions extends Component<Transactions> {
     private readonly assertions: TransactionsAssertions
 
     private readonly transactionsListLocator: string;
