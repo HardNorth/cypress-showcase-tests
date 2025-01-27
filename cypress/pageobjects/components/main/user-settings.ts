@@ -70,28 +70,28 @@ export default class UserSettings extends Component<UserSettings> {
     }
 
     fillUserFirstName(firstName: string) {
-        const chainable =  this.userFirstName.clear();
+        const chainable = this.userFirstName.clear();
         if (firstName) {
             chainable.type(firstName);
         }
     }
 
     fillUserLastName(lastName: string) {
-        const chainable =  this.userLastName.clear();
+        const chainable = this.userLastName.clear();
         if (lastName) {
             chainable.type(lastName);
         }
     }
 
     fillUserEmail(email: string) {
-        const chainable =  this.userEmail.clear();
+        const chainable = this.userEmail.clear();
         if (email) {
             chainable.type(email);
         }
     }
 
     fillUserPhoneNumber(phoneNumber: string) {
-        const chainable =  this.userPhoneNumber.clear();
+        const chainable = this.userPhoneNumber.clear();
         if (phoneNumber) {
             chainable.type(phoneNumber);
         }
