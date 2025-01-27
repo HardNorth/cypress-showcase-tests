@@ -24,6 +24,10 @@ class Header extends Component<Header> {
     get newTransactionLink() {
         return cy.get(this.newTransactionLinkLocator);
     }
+
+    clickSideMenuToggle() {
+        this.sideMenuToggle.click();
+    }
 }
 
 class HeaderAssertions extends ComponentAssertions<Header> {

@@ -81,6 +81,10 @@ export class LoginForm extends Component<LoginForm> {
         this.fillCredentials(user);
         this.loginButton.click();
     }
+
+    clickLoginButton() {
+        this.loginButton.click();
+    }
 }
 
 class LoginFormAssertions extends ComponentAssertions<LoginForm> {

@@ -51,7 +51,7 @@ class SideNavigation extends CloseableComponent<SideNavigation> {
     }
 
     close() {
-        Header.sideMenuToggle.click();
+        Header.clickSideMenuToggle();
     }
 
     openUserSettings() {

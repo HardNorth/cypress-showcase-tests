@@ -56,7 +56,7 @@ describe('User Login tests', () => {
     it('Verify Login with invalid password', () => {
         LoginPage.loginForm.fillUsername(USERS[0].username);
         LoginPage.loginForm.fillPassword('12345');
-        LoginPage.loginForm.loginButton.click();
+        LoginPage.loginForm.clickLoginButton();
         LoginPage.expect.toHaveLoginError('Username or password is invalid');
     });
 });
