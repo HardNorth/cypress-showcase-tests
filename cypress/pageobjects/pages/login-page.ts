@@ -1,6 +1,6 @@
-import {Page, PageAssertions} from "../interfaces";
-import {LoginForm} from "../components/login/login-form";
-import {SignUpForm} from "../components/login/sign-up-form";
+import {Page, PageAssertions} from '../interfaces';
+import {LoginForm} from '../components/login/login-form';
+import {SignUpForm} from '../components/login/sign-up-form';
 
 class LoginPage extends Page<LoginPage> {
     private readonly assertions: LoginPageAssertions

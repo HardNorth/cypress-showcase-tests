@@ -1,4 +1,4 @@
-import {Component, ComponentAssertions} from "../../interfaces";
+import {Component, ComponentAssertions} from '../../interfaces';
 
 class Header extends Component<Header> {
     private readonly assertions: HeaderAssertions
@@ -7,7 +7,7 @@ class Header extends Component<Header> {
     private readonly newTransactionLinkLocator: string;
 
     constructor() {
-        super(`header`);
+        super('header');
         this.assertions = new HeaderAssertions(this);
         this.sideNavToggleLocator = `${this.prefix} button[data-test="sidenav-toggle"]`;
         this.newTransactionLinkLocator = `${this.prefix} a[data-test="nav-top-new-transaction"]`;

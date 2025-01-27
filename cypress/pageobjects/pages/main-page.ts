@@ -1,8 +1,8 @@
-import {Page, PageAssertions} from "../interfaces";
-import SideNavigation from "../components/main/side-navigation";
-import Header from "../components/main/header";
-import Transactions from "../components/main/transactions";
-import UserSettings from "../components/main/user-settings";
+import {Page, PageAssertions} from '../interfaces';
+import SideNavigation from '../components/main/side-navigation';
+import Header from '../components/main/header';
+import Transactions from '../components/main/transactions';
+import UserSettings from '../components/main/user-settings';
 
 class MainPage extends Page<MainPage> {
     private readonly assertions: MainPageAssertions;

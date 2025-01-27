@@ -1,5 +1,5 @@
-import {Component, ComponentAssertions} from "../../interfaces";
-import {User} from "../../../data/interfaces";
+import {Component, ComponentAssertions} from '../../interfaces';
+import {User} from '../../../data/interfaces';
 
 export class LoginForm extends Component<LoginForm> {
     private readonly assertions: LoginFormAssertions

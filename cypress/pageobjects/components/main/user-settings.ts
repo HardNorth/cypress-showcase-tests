@@ -1,4 +1,4 @@
-import {Component, ComponentAssertions} from "../../interfaces";
+import {Component, ComponentAssertions} from '../../interfaces';
 
 export default class UserSettings extends Component<UserSettings> {
     private readonly assertions: UserSettingsAssertions

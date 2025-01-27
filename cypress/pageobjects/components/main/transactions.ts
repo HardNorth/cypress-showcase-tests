@@ -1,4 +1,4 @@
-import {Component, ComponentAssertions} from "../../interfaces";
+import {Component, ComponentAssertions} from '../../interfaces';
 
 export default class Transactions extends Component<Transactions> {
     private readonly assertions: TransactionsAssertions

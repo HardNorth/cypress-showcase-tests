@@ -1,6 +1,6 @@
-import Login from "../services/ui/login";
-import {USERS} from "../data/users";
-import MainPage from "../pageobjects/pages/main-page";
+import Login from '../services/ui/login';
+import {USERS} from '../data/users';
+import MainPage from '../pageobjects/pages/main-page';
 
 describe('User Settings tests', () => {
     beforeEach(() => {

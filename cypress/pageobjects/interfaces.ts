@@ -27,7 +27,7 @@ export abstract class CloseableComponent<T extends CloseableComponent<T>> extend
 
 export abstract class Page<T extends Page<T>> extends Component<T> {
     protected constructor() {
-        super("");
+        super('');
     }
 
     get title() {

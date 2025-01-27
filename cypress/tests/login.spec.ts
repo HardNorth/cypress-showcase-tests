@@ -1,6 +1,6 @@
-import LoginPage from "../pageobjects/pages/login-page";
-import {USERS} from "../data/users";
-import MainPage from "../pageobjects/pages/main-page";
+import LoginPage from '../pageobjects/pages/login-page';
+import {USERS} from '../data/users';
+import MainPage from '../pageobjects/pages/main-page';
 
 describe('User Login tests', () => {
     beforeEach(() => {

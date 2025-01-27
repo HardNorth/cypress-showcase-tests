@@ -1,4 +1,4 @@
-import { defineConfig } from "cypress";
+import { defineConfig } from 'cypress';
 import 'dotenv/config';
 
 export default defineConfig({
@@ -11,8 +11,9 @@ export default defineConfig({
   numTestsKeptInMemory: 0,
   viewportWidth: 1920,
   viewportHeight: 1080,
+  projectId: 'cypress-showcase-tests',
   e2e: {
     baseUrl: process.env.BASE_URL,
-    specPattern: "cypress/tests/**/*.spec.ts",
+    specPattern: 'cypress/tests/**/*.spec.ts',
   },
 });

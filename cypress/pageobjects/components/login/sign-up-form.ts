@@ -1,4 +1,4 @@
-import {Component, ComponentAssertions} from "../../interfaces";
+import {Component, ComponentAssertions} from '../../interfaces';
 
 export class SignUpForm extends Component<SignUpForm> {
     private readonly assertions: SignUpFormAssertions

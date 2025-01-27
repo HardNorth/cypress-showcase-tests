@@ -1,5 +1,5 @@
-import {CloseableComponent, ComponentAssertions} from "../../interfaces";
-import Header from "./header";
+import {CloseableComponent, ComponentAssertions} from '../../interfaces';
+import Header from './header';
 
 class SideNavigation extends CloseableComponent<SideNavigation> {
     private readonly assertions: SideNavAssertions
@@ -12,7 +12,7 @@ class SideNavigation extends CloseableComponent<SideNavigation> {
     private readonly logOutLinkLocator: string;
 
     constructor() {
-        super(`div[data-test="sidenav"]`);
+        super('div[data-test="sidenav"]');
         this.assertions = new SideNavAssertions(this);
         this.balanceLocator = `${this.prefix} h6[data-test="sidenav-user-balance"]`;
         this.homeLinkLocator = `${this.prefix} a[data-test="sidenav-home"]`;

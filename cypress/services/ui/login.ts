@@ -1,5 +1,5 @@
-import LoginPage from "../../pageobjects/pages/login-page";
-import {User} from "../../data/interfaces";
+import LoginPage from '../../pageobjects/pages/login-page';
+import {User} from '../../data/interfaces';
 
 export default class Login {
     private static navigateIfNeeded() {
